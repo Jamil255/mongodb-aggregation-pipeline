@@ -28,7 +28,7 @@ export const getUserDataFun = async (req, res) => {
     const eq = await userModel.find({age:{$eq:21}})
     const ne = await userModel.find({age:{$ne:21}})
     const lte = await userModel.find({age:{$lte:90}})
-    const gte = await userModel.find({gender:{$in:["female"]}})
+    const gte = await userModel.find({gender:{$in:["male"]}})
     const data = await userModel.find({gender:{$nin:["female"]}})
     res.json(data)
   } catch (error) {

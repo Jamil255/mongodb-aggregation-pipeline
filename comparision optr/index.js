@@ -3,6 +3,7 @@ import userModel from '../models/userSchema.js'
 export const userDataFun = async (req, res) => {
   try {
     const { fullName, email, password, gender, age } = req.body
+    console.log(fullName)
     const response = await userModel.create({
       fullName,
       email,

@@ -2,13 +2,10 @@ import userModel from '../models/userSchema.js'
 
 export const userDataFun = async (req, res) => {
   try {
-<<<<<<< HEAD
     const { fullName, email, password, gender, age, experience, hoobies } =
       req.body
-=======
     const { fullName, email, password, gender, age } = req.body
     console.log(fullName)
->>>>>>> 269ed610427d72b11a34f18456d7f071152950a9
     const response = await userModel.create({
       fullName,
       email,
